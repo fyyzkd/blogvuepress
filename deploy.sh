@@ -24,7 +24,7 @@ git push -f git@github.com:fyyzkd/blog.git  main
 
 
 cd ../../vuepress-starter
-rm -rf ./docs/.vuepress
+rm -rf ./docs/.vuepress/dist
 
 git init
 git add -A
