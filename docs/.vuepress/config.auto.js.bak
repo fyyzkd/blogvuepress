@@ -1,0 +1,64 @@
+const path = require('path')
+const rootPath = path.dirname(__dirname)
+
+//导入生成侧边栏的工具类
+const { sideBarTool } = require(path.join(__dirname, './utils/index.js'))
+
+// 需要排除的一些目录
+let unDirIncludes = ['node_modules', 'assets', 'public']
+// 只需要处理后缀的文件类型
+let SuffixIncludes = ['md', 'html']
+//使用方法生生成侧边栏
+//侧边栏
+let sidebar = sideBarTool.genSideBarGroup(rootPath, unDirIncludes, SuffixIncludes, {})
+// 自动获取导航栏和侧边栏
+let nav = [
+	{ 	text: '首页', link: '/' },
+	{ 	text: '资源导航', link: '/link' },
+	{ 	text: 'Java',
+		items:[
+			{text: 'JVM', link: '/java/jvm' }
+		]
+	},
+	{
+		text: 'Spring',
+		items:[
+			{text: 'Spring Framework 5', link: '/java/spring' }
+		]
+	},
+	{
+		text: '项目复盘',
+		items:[
+			{text: '问题整理', link: ' /java/spring' }
+		]
+	},
+	{ 
+		text: '枫无涯的知识体系', 
+		items: [
+			{ text: 'Github', link: 'https://github.com/fyyzkd' },
+			{ text: '博客园', link: 'https://www.cnblogs.com/fyusac/' }
+		]
+	}
+]
+
+let config = {
+    title: '枫无涯',
+    description: '枫无涯的个人博客',
+	// src可以更换的
+	base: '/blog/',
+    markdown: {
+        lineNumbers: true,
+        externalLinks: {
+            target: '_blank', rel: 'noopener noreferrer'
+        }
+    },
+	plugins: ['@vuepress/back-to-top'],
+    themeConfig: {
+		// 导航栏
+        nav: nav,
+		// 侧边栏
+		sidebar: sidebar
+    }
+}
+console.log(JSON.stringify(config,null,2))
+module.exports = config

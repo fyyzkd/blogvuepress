@@ -1,4 +1,13 @@
-module.exports = {
+const path = require('path')
+const rootPath = path.dirname(__dirname)
+
+
+//导入生成导航栏和侧边栏的工具类
+const { navBarTool } = require(path.join(__dirname, './utils/navibar.js'))
+const { sideBarTool } = require(path.join(__dirname, './utils/sidebar.js'))
+
+
+let config = {
     title: '枫无涯',
     description: '枫无涯的个人博客',
 	base: '/blog/',
@@ -8,27 +17,12 @@ module.exports = {
             target: '_blank', rel: 'noopener noreferrer'
         }
     },
+	plugins: ['@vuepress/back-to-top'],
     themeConfig: {
-        nav: [
-            { 	text: '首页', link: '/' },
-			{ 	text: 'Java',
-				items:[
-					{text: 'JVM', link: '/java/jvm' }
-				]
-			},
-			{
-				text: 'Spring',
-				items:[
-					{text: 'Spring Framework 5', link: '/java/spring' }
-				]
-			},
-            { 
-                text: '枫无涯的知识体系', 
-                items: [
-                    { text: 'Github', link: 'https://github.com/fyyzkd' },
-                    { text: '博客园', link: 'https://www.cnblogs.com/fyusac/' }
-                ]
-            }
-        ]
+		// 导航栏
+        nav: navBarTool,
+		// 侧边栏
+		sidebar: sideBarTool
     }
 }
+module.exports = config

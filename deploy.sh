@@ -13,12 +13,11 @@ cp -rf docs/.vuepress/dist ../vueDist/
 # 进入生成的文件夹
 cd ../vueDist/dist
 
-# git初始化，每次初始化不影响推送
+# git初始化，每次初始化不影响推送,提交打包后的项目
 git init
 git add -A
 git commit -m 'deploy'
 git branch -M main
-
 git push -f git@github.com:fyyzkd/blog.git  main
 
 
@@ -26,6 +25,7 @@ git push -f git@github.com:fyyzkd/blog.git  main
 cd ../../vuepress-starter
 rm -rf ./docs/.vuepress/dist
 
+# 提交源码文件
 git init
 git add -A
 git commit -m 'deploy'
