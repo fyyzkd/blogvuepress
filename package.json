@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	"deploy": "bash deploy.sh",
-	"docs:dev": "vuepress dev docs",
+    "deploy": "bash deploy.sh",
+    "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.61",
     "vuepress": "^1.9.9"
   }
 }
