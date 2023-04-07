@@ -22,7 +22,8 @@ let config = {
 		// 导航栏
         nav: navBarTool,
 		// 侧边栏
-		sidebar: sideBarTool
+		sidebar: sideBarTool,
+		subSidebar: 'auto',
     }
 }
 module.exports = config

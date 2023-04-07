@@ -1,12 +1,31 @@
 const navBarTool = [
 	{ 	text: '首页', link: '/md/tags/' },		// 以 ‘/’结束，默认读取 README.md
-	{ 	text: '资源导航', link: '/md/tags/ResourceNavigate/' },
-	{ 	text: 'Java',
+	{ 	text: '资源导航', link: '/md/tags/RN/' },
+	{ 	
+		text: 'Java',
 		items:[
-			{text: 'Java基础之集合', link: '/md/tags/java/Collection/' },
-			{text: 'Java基础之IO', link: '/md/tags/java/IO/' },
-			{text: 'Java进阶之并发', link: '/md/tags/java/Concurrent/' },
-			{text: 'Java进阶之JVM', link: '/md/tags/java/JVM/' },
+			{	
+				text: 'Java 集合系列', 
+				items:[
+					{text: 'Java之集合框架', link: '/md/tags/Java/Collection/'},
+				]
+			},{
+				text: 'Java IO系列',
+				items:[
+					{text: 'Java之IO框架', link: '/md/tags/Java/IO/'},
+					{text: 'Java之Netty框架', link: '/md/tags/Java/IO/Netty/'},
+				]
+			},{
+				text: 'Java 并发系列', 
+				items:[
+					{text: 'Java之并发框架', link: '/md/tags/Java/Concurrent/'},
+				]
+			},{
+				text: 'Java JVM系列', 
+				items:[
+					{text: 'Java之JVM相关', link: '/md/tags/Java/JVM/'},
+				]
+			},
 		]
 	},
 	{
@@ -38,13 +57,13 @@ const navBarTool = [
 			{
 				text: 'SQL 数据库', 
 				items:[
-					{text: 'MySQL 详解', link: '/md/tags/DataBase/SQL/' },
+					{text: 'MySQL 详解', link: '/md/tags/DB/SQL/'},
 				]
 			},
 			{
 				text: 'NoSQL 数据库', 
 				items:[
-					{text: 'Redis 详解', link: '/md/tags/DataBase/NoSQL/' },
+					{text: 'Redis 详解', link: '/md/tags/DB/NoSQL/'},
 				]
 			},
 		]
@@ -55,14 +74,14 @@ const navBarTool = [
 			{
 				text: 'Web容器', 
 				items:[
-					{text: 'Tomcat 源码详解', link: '/md/tags/Microservice/Tomcat/' },
+					{text: 'Tomcat 源码详解', link: '/md/tags/MS/Tomcat/'},
 				]
 			},
 			{
 				text: '消息队列', 
 				items:[
-					{text: 'Kafka 源码详解', link: '/md/tags/Microservice/MQ/Kafka/' },
-					{text: 'RocketMQ 源码详解', link: '/md/tags/Microservice/MQ/RocketMQ/' },
+					{text: 'Kafka 源码详解', link: '/md/tags/MS/MQ/Kafka/'},
+					{text: 'RocketMQ 源码详解', link: '/md/tags/MS/MQ/RocketMQ/'},
 				]
 			},
 		]
@@ -73,14 +92,14 @@ const navBarTool = [
 			{
 				text: 'Web容器', 
 				items:[
-					{text: 'Tomcat 源码详解', link: '/md/tags/Middleware/Tomcat/' },
+					{text: 'Tomcat 源码详解', link: '/md/tags/MW/Tomcat/' },
 				]
 			},
 			{
 				text: '消息队列', 
 				items:[
-					{text: 'Kafka 源码详解', link: '/md/tags/Middleware/MQ/Kafka/' },
-					{text: 'RocketMQ 源码详解', link: '/md/tags/Middleware/MQ/RocketMQ/' },
+					{text: 'Kafka 源码详解', link: '/md/tags/MW/MQ/Kafka/' },
+					{text: 'RocketMQ 源码详解', link: '/md/tags/MW/MQ/RocketMQ/' },
 				]
 			},
 		]
@@ -91,19 +110,19 @@ const navBarTool = [
 			{
 				text: '数据结构与算法', 
 				items:[
-					{text: '排序算法', link: '/md/tags/ComputerScience/Algorithm/' },
+					{text: '排序算法', link: '/md/tags/CS/Algorithm/' },
 				]
 			},
 			{
 				text: '计算机网络', 
 				items:[
-					{text: 'TCP/UDP协议', link: '/md/tags/ComputerScience/Network/' },
+					{text: 'TCP/UDP协议', link: '/md/tags/CS/Network/' },
 				]
 			},
 			{
 				text: '操作系统', 
 				items:[
-					{text: '进程与线程', link: '/md/tags/ComputerScience/OS/' },
+					{text: '进程与线程', link: '/md/tags/CS/OS/' },
 				]
 			},
 		]
@@ -111,7 +130,7 @@ const navBarTool = [
 	{
 		text: '项目复盘',
 		items:[
-			{text: '问题整理', link: '/md/tags/ProjectResume/ProblemSort/' }
+			{text: '问题整理', link: '/md/tags/PR/ProblemSort/' }
 		]
 	},
 	{ 
